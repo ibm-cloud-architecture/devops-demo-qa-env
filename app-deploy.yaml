@@ -57,6 +57,9 @@ metadata:
 spec:
 applicationImage: ibmcase/bluecompute-web:0.6.0
   createKnativeService: false
+  selector:
+    matchLabels:
+      app: "web"
   expose: true
   service:
     port: 8000
@@ -65,9 +68,4 @@ applicationImage: ibmcase/bluecompute-web:0.6.0
   stack: nodejs
   version: 1.0.0
   pullSecret: ibm-cr-pull-secret
-  #serviceAccountName: kabanero-operator
-  #replicas: 2
-
-
-
-
+  replicas: 2
